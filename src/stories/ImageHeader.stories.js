@@ -1,10 +1,15 @@
 import React from "react"
 import ImageHeader from "../components/ImageHeader"
 
+//Assets
 import Porsche from "./assets/porsche.jpg"
 import Traffic from "./assets/traffic.jpg"
 
+//GlobalStyles
 import GlobalStyle from "../components/GlobalStyle"
+
+//PropTypes
+import PropTypes from 'prop-types'
 
 export default {
   title: "ImageHeader",

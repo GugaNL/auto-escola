@@ -25,7 +25,6 @@ const Container = styled.div`
   }
 
   ${BreakAt(BreakpointSize.lg)} {
-    width: 1140px;
     margin: 0 auto; //Em cima e baixo nao tem margem e dos lados assume o automatico e centraliza
   }
 `
