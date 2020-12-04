@@ -1,20 +1,39 @@
 import React from "react"
 import styled, { css } from "styled-components"
 
+//Util
+import { BreakAt, BreakpointSize } from "../components/Breakpoints"
+
 const Root = styled.div`
-${props => css`
-background: url(${props.image}), rgba(0,0,0,0.4 );
-background-size: cover;
-background-position: center; 
-`}
+  color: #fff;
+  padding: 100px 0;
+  ${(props) => css`
+    background: url(${props.image}), rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+  `}
+`
+
+const Container = styled.div`
+  background-color: red;
+  width: 100%;
+  padding: 0 8px;
+
+  ${BreakAt(BreakpointSize.sm)} {
+    padding: 0 16px;
+  }
+
+  ${BreakAt(BreakpointSize.lg)} {
+    width: 1140px;
+    margin: 0 auto; //Em cima e baixo nao tem margem e dos lados assume o automatico e centraliza
+  }
 `
 
 const Title = styled.h1`
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,600&display=swap");
-  color: red;
-  font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
+  margin-left: 0px;
 `
 
 const Content = styled.div`
@@ -35,10 +54,10 @@ const Content = styled.div`
 
 const ImageHeader = ({ image, title, children }) => (
   <Root image={image}>
-    <div>
+    <Container>
       <Title>{title}</Title>
       <Content>{children}</Content>
-    </div>
+    </Container>
   </Root>
 )
 
