@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.extensionsPath": "",
+    "prettier.semi": false
+}
