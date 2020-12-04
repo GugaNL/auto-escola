@@ -1,6 +1,8 @@
 import React from "react"
 import ImageHeader from "../components/ImageHeader"
-//import "../components/ImageHeader.css"
+
+import Porsche from './assets/porsche.jpg'
+import Traffic from './assets/traffic.jpg'
 
 export default {
   title: "ImageHeader",
@@ -8,7 +10,7 @@ export default {
 }
 
 export const usage = () => (
-  <ImageHeader title="Ganhe sua liberdade">
+  <ImageHeader title="Ganhe sua liberdade" image={Porsche}>
     <ul>
       <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
       <li>
