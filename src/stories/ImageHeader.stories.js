@@ -9,7 +9,7 @@ import Traffic from "./assets/traffic.jpg"
 import GlobalStyle from "../components/GlobalStyle"
 
 //PropTypes
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 
 export default {
   title: "ImageHeader",
@@ -19,7 +19,15 @@ export default {
 export const usage = () => (
   <>
     <GlobalStyle />
-    <ImageHeader title="Ganhe sua liberdade" image={Porsche}>
+    <ImageHeader
+      title={
+        <span>
+          Ganhe sua <strong>liberdade</strong> <br />
+          para ir e vir
+        </span>
+      }
+      image={Porsche}
+    >
       <ul>
         <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
         <li>
