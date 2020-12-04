@@ -1,15 +1,16 @@
 import React from "react"
 import ImageHeader from "../components/ImageHeader"
+import Heading from "../components/Heading"
 
 //Assets
 import Porsche from "./assets/porsche.jpg"
-import Traffic from "./assets/traffic.jpg"
+//import Traffic from "./assets/traffic.jpg"
 
 //GlobalStyles
 import GlobalStyle from "../components/GlobalStyle"
 
-//PropTypes
-import PropTypes from "prop-types"
+//Story addons
+import { text } from "@storybook/addon-knobs"
 
 export default {
   title: "ImageHeader",
@@ -19,15 +20,14 @@ export default {
 export const usage = () => (
   <>
     <GlobalStyle />
-    <ImageHeader
-      title={
-        <span>
+    <ImageHeader image={Porsche}>
+      <Heading>
+        <h1>{text("Title", "Ganhe sua liberdade de ir e vir")}</h1>
+        {/*<h1>
           Ganhe sua <strong>liberdade</strong> <br />
           para ir e vir
-        </span>
-      }
-      image={Porsche}
-    >
+        </h1>*/}
+      </Heading>
       <ul>
         <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
         <li>

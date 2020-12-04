@@ -33,31 +33,6 @@ const Container = styled.div`
   }
 `
 
-const Title = styled.h1`
-  position: relative;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-left: 0px;
-  margin-bottom: 25px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  width: 100%;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    background-color: ${PrimaryColor};
-    height: 5px;
-    width: 70px;
-  }
-
-  strong {
-    color: ${PrimaryColor};
-  }
-`
-
 const Content = styled.div`
   li {
     font-size: 17px;
@@ -75,10 +50,9 @@ const Content = styled.div`
   }
 `
 
-const ImageHeader = ({ image, title, children }) => (
+const ImageHeader = ({ image, children }) => (
   <Root image={image}>
     <Container>
-      <Title>{title}</Title>
       <Content>{children}</Content>
     </Container>
   </Root>
@@ -86,7 +60,7 @@ const ImageHeader = ({ image, title, children }) => (
 
 ImageHeader.propTypes = {
   image: PropTypes.string,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  //title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   children: PropTypes.node, //Se fosse para aceitar somente 1 elemento seria element
 }
 
