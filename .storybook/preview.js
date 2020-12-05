@@ -1,6 +1,6 @@
 import React from "react"
 import { addDecorator, addParameters } from "@storybook/react" //Permite adicionar qualquer estrutura acima do storybook e surtir efeito para todas as stories
-import GlobalStyle from "../src/components/GlobalStyle"
+import GlobalStyle from "../src/styles/GlobalStyle"
 
 addDecorator((storyFn) => (
   <>

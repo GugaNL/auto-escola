@@ -51,7 +51,7 @@ const Content = styled.div`
 `
 
 const MainHeader = ({ image, children }) => (
-  <Root image={image}>
+  <Root image={image} data-testid="MainHeader">
     <Container>
       <Content>{children}</Content>
     </Container>
