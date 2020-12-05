@@ -1,5 +1,5 @@
 import React from "react"
-import ImageHeader from "../components/ImageHeader"
+import MainHeader from "../components/MainHeader"
 import Heading from "../components/Heading"
 
 //Assets
@@ -13,14 +13,14 @@ import GlobalStyle from "../styles/GlobalStyle"
 import { text } from "@storybook/addon-knobs"
 
 export default {
-  title: "ImageHeader",
-  component: ImageHeader,
+  title: "MainHeader",
+  component: MainHeader,
 }
 
 export const usage = () => (
   <>
     <GlobalStyle />
-    <ImageHeader image={Porsche}>
+    <MainHeader image={Porsche}>
       <Heading>
         <h1>{text("Title", "Ganhe sua liberdade de ir e vir")}</h1>
         {/*<h1>
@@ -40,6 +40,6 @@ export const usage = () => (
         </li>
       </ul>
       <button>Matricule-se agora!</button>
-    </ImageHeader>
+    </MainHeader>
   </>
 )

@@ -50,7 +50,7 @@ const Content = styled.div`
   }
 `
 
-const ImageHeader = ({ image, children }) => (
+const MainHeader = ({ image, children }) => (
   <Root image={image}>
     <Container>
       <Content>{children}</Content>
@@ -58,10 +58,10 @@ const ImageHeader = ({ image, children }) => (
   </Root>
 )
 
-ImageHeader.propTypes = {
+MainHeader.propTypes = {
   image: PropTypes.string,
   //title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   children: PropTypes.node, //Se fosse para aceitar somente 1 elemento seria element
 }
 
-export default ImageHeader
+export default MainHeader
