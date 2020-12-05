@@ -7,7 +7,7 @@ import Porsche from "./assets/porsche.jpg"
 //import Traffic from "./assets/traffic.jpg"
 
 //GlobalStyles
-import GlobalStyle from "../components/GlobalStyle"
+import GlobalStyle from "../styles/GlobalStyle"
 
 //Story addons
 import { text } from "@storybook/addon-knobs"

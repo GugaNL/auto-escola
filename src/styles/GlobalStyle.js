@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
 //Utils
-import { BreakAt, BreakpointSize } from "../components/Breakpoints"
+import { BreakAt, BreakpointSize } from "./Breakpoints"
 
 const GlobalStyle = createGlobalStyle`
 

@@ -2,7 +2,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 
 //Util
-import { BreakAt, BreakpointSize } from "../components/Breakpoints"
+import { BreakAt, BreakpointSize } from "../styles/Breakpoints"
 
 //Types
 import PropTypes from "prop-types"
