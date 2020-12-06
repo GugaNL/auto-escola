@@ -39,7 +39,6 @@ export const usage = () => (
           incidunt quo.
         </li>
       </ul>
-      <button>Matricule-se agora!</button>
     </MainHeader>
   </>
 )
