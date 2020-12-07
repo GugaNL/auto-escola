@@ -1,9 +1,14 @@
 import React from "react"
 import GlobalStyle from "./GlobalStyle"
+import ThemeProvider from "../styles/ThemeProvider"
 import { render } from "@testing-library/react"
 
 test("match snapshot", () => {
-  render(<GlobalStyle />)
+  render(
+    <ThemeProvider>
+      <GlobalStyle />
+    </ThemeProvider>
+  )
 
   expect(document.head).toMatchSnapshot()
 })

@@ -1,12 +1,16 @@
 import React from "react"
 import { addDecorator, addParameters } from "@storybook/react" //Permite adicionar qualquer estrutura acima do storybook e surtir efeito para todas as stories
 import GlobalStyle from "../src/styles/GlobalStyle"
-import ThemeProvider from "../src/styles/ThemeProvider"
+import ThemeProvider, { ThemeNames } from "../src/styles/ThemeProvider"
+
+import { select } from "@storybook/addon-knobs"
 
 addDecorator((storyFn) => (
   <>
-    <GlobalStyle />
-    <ThemeProvider>{storyFn()}</ThemeProvider>
+    <ThemeProvider theme={select("ThemeNames", ThemeNames, ThemeNames.light)}>
+      <GlobalStyle />
+      {storyFn()}
+    </ThemeProvider>
   </>
 ))
 

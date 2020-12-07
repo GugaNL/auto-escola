@@ -7,7 +7,7 @@ import { BreakAt, BreakpointSize } from "../styles/Breakpoints"
 //Types
 import PropTypes from "prop-types"
 
-const PrimaryColor = "#ffc104"
+//const PrimaryColor = "#ffc104"
 
 const Root = styled.div`
   color: #fff;
@@ -46,7 +46,7 @@ const Content = styled.div`
 
   li::before {
     content: "\\2713\\0020";
-    color: ${PrimaryColor};
+    color: ${(props) => props.theme.colors.primary.main};
   }
 `
 

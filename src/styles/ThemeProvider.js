@@ -3,7 +3,9 @@ import React from "react"
 //Theme
 import { ThemeProvider as StyledProvider } from "styled-components"
 
-const theme = {
+export const ThemeNames = { light: "light", ocean: "ocean" }
+
+const light = {
   colors: {
     primary: {
       main: "#ffc104",
@@ -19,8 +21,27 @@ const theme = {
   },
 }
 
-const ThemeProvider = ({ children }) => (
-  <StyledProvider theme={theme}>{children}</StyledProvider>
+const allThemes = {
+  light,
+  ocean: {
+    ...light,
+    colors: {
+      ...light.colors,
+      primary: {
+        main: "#2196f3",
+        dark: "#1769aa",
+        light: "#4dabf5",
+      },
+    },
+  },
+}
+
+const ThemeProvider = ({ theme, children }) => (
+  <StyledProvider theme={allThemes[theme]}>{children}</StyledProvider>
 )
+
+ThemeProvider.defaultProps = {
+  theme: "light",
+}
 
 export default ThemeProvider
