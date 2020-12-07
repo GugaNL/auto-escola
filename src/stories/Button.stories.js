@@ -1,5 +1,5 @@
 import React from "react"
-import Button from "../components/Button"
+import Button from "../components/atoms/Button"
 
 import { actions } from "@storybook/addon-actions"
 
@@ -7,7 +7,7 @@ import { actions } from "@storybook/addon-actions"
 import styled from "styled-components"
 
 export default {
-  title: "Components/Button",
+  title: "Components/Atoms/Button",
   component: Button,
 }
 

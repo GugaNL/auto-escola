@@ -1,6 +1,6 @@
 import React from "react"
 import MainHeader from "./MainHeader"
-import ThemeProvider from "../styles/ThemeProvider"
+import ThemeProvider from "../../styles/ThemeProvider"
 
 import { render } from "@testing-library/react"
 

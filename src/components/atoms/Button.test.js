@@ -1,7 +1,7 @@
 import React from "react"
 import Button from "./Button"
 import { render, fireEvent } from "@testing-library/react"
-import ThemeProvider from "../styles/ThemeProvider"
+import ThemeProvider from "../../styles/ThemeProvider"
 
 test("renders a text in button", () => {
   const { getByText } = render(

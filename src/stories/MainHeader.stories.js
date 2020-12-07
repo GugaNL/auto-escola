@@ -1,7 +1,7 @@
 import React from "react"
-import MainHeader from "../components/MainHeader"
-import Heading from "../components/Heading"
-import Button from "../components/Button"
+import MainHeader from "../components/molecules/MainHeader"
+import Heading from "../components/atoms/Heading"
+import Button from "../components/atoms/Button"
 
 //Assets
 import Porsche from "./assets/porsche.jpg"
@@ -14,7 +14,7 @@ import GlobalStyle from "../styles/GlobalStyle"
 import { text } from "@storybook/addon-knobs"
 
 export default {
-  title: "MainHeader",
+  title: "Components/Molecules/MainHeader",
   component: MainHeader,
 }
 

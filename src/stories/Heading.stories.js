@@ -1,13 +1,13 @@
 import React from "react"
 
 //Component
-import Heading from "./../components/Heading"
+import Heading from "./../components/atoms/Heading"
 
 //Story addons
 import { text } from "@storybook/addon-knobs"
 
 export default {
-  title: "Heading",
+  title: "Components/Atoms/Heading",
   component: Heading,
 }
 
