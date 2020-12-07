@@ -34,6 +34,8 @@ const getLinkText = (props) => {
   if (props.color === ButtonColors.default) {
     return "#757575"
   }
+
+  return getMainColor(props)
 }
 
 const ButtonColors = {
@@ -82,7 +84,7 @@ const ButtonOutlined = styled(Button)`
 const ButtonLinked = styled(Button)`
   background-color: transparent;
   border-color: transparent;
-  color: ${getMainColor};
+  color: ${getLinkText};
 
   &:hover:enabled {
     background-color: transparent;
