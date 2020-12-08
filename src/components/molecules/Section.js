@@ -1,24 +1,35 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Container from "../atoms/Container"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const Content = styled.div`
-  margin: 40px 0;
+  padding: 40px 0;
+  ${(props) =>
+    props.inverse &&
+    css`
+      background-color: #f7f7f7;
+    `}
+
+  h2 {
+    margin-top: 0;
+  }
 `
 
-const Section = ({ children }) => (
-  <Container>
-    <Content>{children}</Content>
-  </Container>
+const Section = ({ inverse, children }) => (
+  <Content inverse={inverse}>
+    <Container>{children}</Container>
+  </Content>
 )
 
 Section.defaultProps = {
   children: undefined,
+  inverse: false,
 }
 
 Section.propTypes = {
   children: PropTypes.node,
+  inverse: PropTypes.bool,
 }
 
 export default Section

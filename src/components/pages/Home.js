@@ -2,6 +2,7 @@ import React from "react"
 import { FaCar, FaKey, FaMapMarkerAlt, FaAccessibleIcon } from "react-icons/fa"
 //import PropTypes from "prop-types"
 import Porsche from "../../assets/porsche.jpg"
+import Road from "../../assets/road.mp4"
 import MainHeader from "../molecules/MainHeader"
 import Heading from "../atoms/Heading"
 import Button from "../atoms/Button"
@@ -50,6 +51,39 @@ const Home = () => (
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </Feature>
       </Grid>
+    </Section>
+
+    <Section inverse>
+      <Heading>
+        <h2>Conheça nossos serviços</h2>
+      </Heading>
+    </Section>
+
+    <Section>
+      <Grid md={2}>
+        <div>
+          <Heading>
+            <h2>Lucena Auto Escola</h2>
+          </Heading>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
+            quasi possimus eum consequuntur! Alias dolor cupiditate autem
+            necessitatibus.
+          </p>
+          <div>
+            <Button color="primary">Saiba mais</Button>
+          </div>
+        </div>
+        <div>
+          <video src={Road} width="100%" autoPlay loop></video>
+        </div>
+      </Grid>
+    </Section>
+
+    <Section inverse>
+      <Heading>
+        <h2>Dúvidas recorrentes</h2>
+      </Heading>
     </Section>
   </>
 )
