@@ -1,9 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
-
-//Util
-import { BreakAt, BreakpointSize } from "../../styles/Breakpoints"
-
+import Container from "../atoms/Container"
 //Types
 import PropTypes from "prop-types"
 
@@ -20,20 +17,9 @@ const Root = styled.div`
   `}
 `
 
-const Container = styled.div`
-  width: 100%;
-  padding: 0 8px;
-
-  ${BreakAt(BreakpointSize.sm)} {
-    padding: 0 16px;
-  }
-
-  ${BreakAt(BreakpointSize.lg)} {
-    margin: 0 auto; //Em cima e baixo nao tem margem e dos lados assume o automatico e centraliza
-  }
-`
-
 const Content = styled.div`
+  display: inline-block; //A linha só vai até onde o conteúdo for
+
   li {
     font-size: 17px;
     font-weight: 300;

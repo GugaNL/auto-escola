@@ -37,7 +37,9 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js",
-      "!src/**/*.stories.js"
+      "!src/**/*.stories.js",
+      "!src/reportWebVitals.js",
+      "!src/index.js"
     ]
   },
   "browserslist": {
