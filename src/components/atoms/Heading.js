@@ -13,7 +13,7 @@ const Heading = styled.div`
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
 
-    &::after {
+    &:after {
       content: "";
       position: absolute;
       left: 0;

@@ -120,6 +120,7 @@ exports[`renders with link variant 1`] = `
   background-color: transparent;
   border-color: transparent;
   color: #757575;
+  padding: 0;
 }
 
 .c1:hover:enabled {
@@ -235,6 +236,7 @@ exports[`renders with variant link and primary color 1`] = `
   background-color: transparent;
   border-color: transparent;
   color: #ffc104;
+  padding: 0;
 }
 
 .c1:hover:enabled {

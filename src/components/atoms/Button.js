@@ -94,6 +94,7 @@ const ButtonLinked = styled(Button)`
   background-color: transparent;
   border-color: transparent;
   color: ${getLinkText};
+  padding: 0;
 
   &:hover:enabled {
     background-color: transparent;
