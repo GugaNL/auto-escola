@@ -9,6 +9,7 @@ import Button from "../atoms/Button"
 import Grid from "../atoms/Grid"
 import Feature from "../atoms/Feature"
 import Section from "../molecules/Section"
+import Footer from "../organisms/Footer"
 
 const Home = () => (
   <>
@@ -85,6 +86,8 @@ const Home = () => (
         <h2>Dúvidas recorrentes</h2>
       </Heading>
     </Section>
+
+    <Footer />
   </>
 )
 
