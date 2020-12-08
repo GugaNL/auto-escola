@@ -54,11 +54,11 @@ const Accordion = ({ title, children, open: propOpen, onChange }) => {
   const open = isControlled ? propOpen : isOpen
 
   const handleOpen = () => {
-    if (isControlled) {
-      onChange(!open)
-    } else {
+    if (!isControlled) {
       setOpen(!open)
     }
+
+    onChange(!open)
   }
 
   return (
@@ -76,7 +76,7 @@ Accordion.defaultProps = {
   open: undefined,
   title: undefined,
   children: undefined,
-  onChange: undefined,
+  onChange: () => {},
 }
 
 Accordion.propTypes = {
