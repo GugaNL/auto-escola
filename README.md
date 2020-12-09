@@ -1,4 +1,4 @@
-#Auto Escola Lucena
+# Auto Escola Lucena
 
 Projeto desenvolvido apenas para aprendizagem, ultilizando ReactJS, bem como hooks e styled components
 
