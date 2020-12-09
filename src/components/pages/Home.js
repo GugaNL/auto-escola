@@ -125,7 +125,7 @@ const Home = () => (
           </div>
         </div>
         <div>
-          <video src={Road} width="100%" autoPlay loop></video>
+          <video src={Road} width="100%" autoPlay loop muted></video>
         </div>
       </Grid>
     </Section>
