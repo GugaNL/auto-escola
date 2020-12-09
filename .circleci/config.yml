@@ -13,6 +13,6 @@ jobs:
       - run: node --version
       - run: npm --version
 
-workflow:
+workflows:
   ci:
     - setup
