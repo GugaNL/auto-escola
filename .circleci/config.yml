@@ -12,6 +12,7 @@ jobs:
       - node/install-npm
       - run: node --version
       - run: npm --version
+      - run: npm test -- --coverage --watchAll=false
 
 workflows:
   ci:
