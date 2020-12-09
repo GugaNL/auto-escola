@@ -9,10 +9,11 @@ jobs:
       - image: circleci/node:12.19.0-browsers
     steps:
       - checkout
-      - node/install: install-npm:true
+      - node/install-npm
       - run: node --version
       - run: npm --version
 
 workflows:
   ci:
-    - setup
+    jobs:
+      - setup
