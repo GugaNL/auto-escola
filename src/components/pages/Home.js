@@ -61,7 +61,7 @@ const products = [
 
 const Home = () => (
   <>
-    <MainHeader image={Porsche}>
+    <MainHeader image={Porsche} listIconCheck>
       <Heading>
         {/*<h1>{text("Title", "Ganhe sua liberdade de ir e vir")}</h1>*/}
         <h1>
