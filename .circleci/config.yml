@@ -14,7 +14,7 @@ jobs:
       - run: npm --version
       - node/install-packages
       - run: npm test -- --coverage --watchAll=false
-      - run: npm chromatic --project-token 7jg1cd7ny4
+      - run: npm chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}
 
 workflows:
   ci:
