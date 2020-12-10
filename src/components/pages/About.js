@@ -7,9 +7,25 @@ import Heading from "../atoms/Heading"
 import Section from "../molecules/Section"
 import Grid from "../atoms/Grid"
 import Footer from "../organisms/Footer"
+import Card, { CardMedia, CardMediaDesc } from "../molecules/Card"
 //Images
 import Porsche from "../../assets/porsche.jpg"
 import AboutImage from "../draws/about.svg"
+import Bege from "../../assets/driverTeachers/bege.jpg"
+import Husky from "../../assets/driverTeachers/husky.jpg"
+import Tabby from "../../assets/driverTeachers/malhado.jpg"
+import Brown from "../../assets/driverTeachers/marrom.jpg"
+import German from "../../assets/driverTeachers/pastor-alemao.jpg"
+import Black from "../../assets/driverTeachers/preto-molhado.jpg"
+
+const instructors = [
+  { id: 1, name: "Bob", avatar: Bege },
+  { id: 2, name: "Tom", avatar: Husky },
+  { id: 3, name: "Oliver", avatar: Tabby },
+  { id: 4, name: "Rin", avatar: Brown },
+  { id: 5, name: "Casper", avatar: German },
+  { id: 6, name: "Alfred", avatar: Black },
+]
 
 const Image = styled.img`
   width: 100%;
@@ -103,6 +119,17 @@ const About = () => (
       <Heading>
         <h3>Conheça nossos professores</h3>
       </Heading>
+      <Grid sm={2} md={3} lg={4}>
+        {instructors.map((instructor) => {
+          return (
+            <CardMedia key={instructor.id} image={instructor.avatar}>
+              <CardMediaDesc>
+                <h5>{instructor.name}</h5>
+              </CardMediaDesc>
+            </CardMedia>
+          )
+        })}
+      </Grid>
     </Section>
     <Footer />
   </>
