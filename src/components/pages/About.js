@@ -1,5 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types"
+//import PropTypes from "prop-types"
 import styled from "styled-components"
 //Components
 import MainHeader from "../molecules/MainHeader"
@@ -7,10 +7,10 @@ import Heading from "../atoms/Heading"
 import Section from "../molecules/Section"
 import Grid from "../atoms/Grid"
 import Footer from "../organisms/Footer"
-import Card, { CardMedia, CardMediaDesc } from "../molecules/Card"
+import { CardMedia, CardMediaDesc } from "../molecules/Card"
 //Images
 import Porsche from "../../assets/porsche.jpg"
-import AboutImage from "../draws/about.svg"
+import AboutImage from "../../assets/svg/about.svg"
 import Bege from "../../assets/driverTeachers/bege.jpg"
 import Husky from "../../assets/driverTeachers/husky.jpg"
 import Tabby from "../../assets/driverTeachers/malhado.jpg"
@@ -135,8 +135,8 @@ const About = () => (
   </>
 )
 
-About.defaultProps = {}
+//About.defaultProps = {}
 
-About.propTypes = {}
+//About.propTypes = {}
 
 export default About
