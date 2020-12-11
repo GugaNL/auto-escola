@@ -30,16 +30,37 @@ const Content = styled.div`
     padding-left: 0;
   }
 
-  li::before {
+  li:before {
     content: "\\2713\\0020";
     color: ${(props) => props.theme.colors.primary.main};
   }
 `
 
-const MainHeader = ({ image, children }) => (
+const ContentNormal = styled.div`
+  display: inline-block; //A linha só vai até onde o conteúdo for
+
+  li {
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li:before {
+    color: ${(props) => props.theme.colors.primary.main};
+  }
+`
+
+const MainHeader = ({ image, children, listIconCheck }) => (
   <Root image={image} data-testid="MainHeader">
     <Container>
-      <Content>{children}</Content>
+      {listIconCheck ? (
+        <Content>{children}</Content>
+      ) : (
+        <ContentNormal>{children}</ContentNormal>
+      )}
     </Container>
   </Root>
 )
@@ -48,6 +69,7 @@ MainHeader.propTypes = {
   image: PropTypes.string,
   //title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   children: PropTypes.node, //Se fosse para aceitar somente 1 elemento seria element
+  listIconCheck: PropTypes.bool,
 }
 
 export default MainHeader

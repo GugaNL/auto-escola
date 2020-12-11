@@ -11,6 +11,9 @@ exports[`renders with danger color 1`] = `
   background-color: #ff3d00;
   border: 2px solid #ff3d00;
   color: #212121;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .c0:disabled {
@@ -18,7 +21,7 @@ exports[`renders with danger color 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #b22a00;
   border-color: #b22a00;
 }
@@ -42,6 +45,9 @@ exports[`renders with default color 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .c0:disabled {
@@ -49,7 +55,7 @@ exports[`renders with default color 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -73,6 +79,9 @@ exports[`renders with default variant 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .c0:disabled {
@@ -80,7 +89,7 @@ exports[`renders with default variant 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -104,6 +113,9 @@ exports[`renders with link variant 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .c0:disabled {
@@ -111,7 +123,7 @@ exports[`renders with link variant 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -123,7 +135,7 @@ exports[`renders with link variant 1`] = `
   padding: 0;
 }
 
-.c1:hover:enabled {
+.c1:hover:not(:disabled) {
   background-color: transparent;
   border-color: transparent;
   color: #5a6268;
@@ -148,6 +160,9 @@ exports[`renders with outlined variant 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .c0:disabled {
@@ -155,7 +170,7 @@ exports[`renders with outlined variant 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -165,7 +180,7 @@ exports[`renders with outlined variant 1`] = `
   color: #e0e0e0;
 }
 
-.c1:hover:enabled {
+.c1:hover:not(:disabled) {
   background-color: transparent;
   color: #5a6268;
 }
@@ -189,6 +204,9 @@ exports[`renders with primary color 1`] = `
   background-color: #ffc104;
   border: 2px solid #ffc104;
   color: #212121;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .c0:disabled {
@@ -196,7 +214,7 @@ exports[`renders with primary color 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #c79100;
   border-color: #c79100;
 }
@@ -220,6 +238,9 @@ exports[`renders with variant link and primary color 1`] = `
   background-color: #ffc104;
   border: 2px solid #ffc104;
   color: #212121;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .c0:disabled {
@@ -227,7 +248,7 @@ exports[`renders with variant link and primary color 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #c79100;
   border-color: #c79100;
 }
@@ -239,7 +260,7 @@ exports[`renders with variant link and primary color 1`] = `
   padding: 0;
 }
 
-.c1:hover:enabled {
+.c1:hover:not(:disabled) {
   background-color: transparent;
   border-color: transparent;
   color: #c79100;
@@ -264,6 +285,9 @@ exports[`renders with variant outlined and primary color 1`] = `
   background-color: #ffc104;
   border: 2px solid #ffc104;
   color: #212121;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .c0:disabled {
@@ -271,7 +295,7 @@ exports[`renders with variant outlined and primary color 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #c79100;
   border-color: #c79100;
 }
@@ -281,7 +305,7 @@ exports[`renders with variant outlined and primary color 1`] = `
   color: #ffc104;
 }
 
-.c1:hover:enabled {
+.c1:hover:not(:disabled) {
   background-color: transparent;
   color: #c79100;
 }

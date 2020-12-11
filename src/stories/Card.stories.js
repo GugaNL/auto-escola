@@ -1,15 +1,20 @@
 import React from "react"
-import Card, { CardBody, CardMedia } from "../components/molecules/Card"
+import Card, {
+  CardBody,
+  CardMedia,
+  CardMediaDesc,
+} from "../components/molecules/Card"
 import Heading from "../components/atoms/Heading"
 import Button from "../components/atoms/Button"
 import Section from "../components/molecules/Section"
 
 import Traffic from "./assets/traffic.jpg"
+import DogTeacher from "../assets/driverTeachers/marrom.jpg"
 
 export default {
   title: "Components/Molecules/Card",
   component: Card,
-  subcomponents: { CardBody, CardMedia },
+  subcomponents: { CardBody, CardMedia, CardMediaDesc },
 }
 
 export const usage = () => (
@@ -53,6 +58,18 @@ export const withMedia = () => (
           </Button>
         </div>
       </CardBody>
+    </Card>
+  </Section>
+)
+
+export const withOnlyMedia = () => (
+  <Section inverse>
+    <Card>
+      <CardMedia image={DogTeacher}>
+        <CardMediaDesc>
+          <h5>Bob</h5>
+        </CardMediaDesc>
+      </CardMedia>
     </Card>
   </Section>
 )

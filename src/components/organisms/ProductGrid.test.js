@@ -1,6 +1,7 @@
 import React from "react"
 import { render, fireEvent, screen } from "@testing-library/react"
 import ProductGrid from "./ProductGrid"
+import { MemoryRouter as Router } from "react-router-dom"
 
 const buildProducts = (size) => {
   let result = []
@@ -21,14 +22,20 @@ describe.each([
 ])("Meu grupo", (size, expected) => {
   test("with %i products show only %i", () => {
     const { getAllByRole } = render(
-      <ProductGrid products={buildProducts(size)} />
+      <Router>
+        <ProductGrid products={buildProducts(size)} />
+      </Router>
     )
 
     expect(getAllByRole("heading").length).toBe(expected) //Quantas vezes o elemento h6 vai se repetir
   })
 
   test("Show the products when button is clicked", async () => {
-    render(<ProductGrid products={buildProducts(size)} />)
+    render(
+      <Router>
+        <ProductGrid products={buildProducts(size)} />
+      </Router>
+    )
 
     await fireEvent.click(screen.getByText("Lista completa de serviços")) //Não pode ser button porque existe mais de um
 

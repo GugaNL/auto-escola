@@ -44,6 +44,18 @@ export const usage = () => (
         Danger
       </Button>
     </Toolbar>
+    <p>As a Route Link</p>
+    <Toolbar>
+      <Button as="a" href="#" disabled {...events}>
+        Default
+      </Button>
+      <Button as="a" href="#" disabled color="primary" {...events}>
+        Primary
+      </Button>
+      <Button as="a" href="#" disabled color="danger" {...events}>
+        Danger
+      </Button>
+    </Toolbar>
   </div>
 )
 
@@ -73,6 +85,32 @@ export const outlined = () => (
         Danger
       </Button>
     </Toolbar>
+    <p>As a Route Link</p>
+    <Toolbar>
+      <Button variant="outlined" as="a" href="#" disabled {...events}>
+        Default
+      </Button>
+      <Button
+        variant="outlined"
+        as="a"
+        href="#"
+        disabled
+        color="primary"
+        {...events}
+      >
+        Primary
+      </Button>
+      <Button
+        variant="outlined"
+        as="a"
+        href="#"
+        disabled
+        color="danger"
+        {...events}
+      >
+        Danger
+      </Button>
+    </Toolbar>
   </div>
 )
 
@@ -99,6 +137,32 @@ export const link = () => (
         Primary
       </Button>
       <Button variant="link" disabled color="danger" {...events}>
+        Danger
+      </Button>
+    </Toolbar>
+    <p>As a Route Link</p>
+    <Toolbar>
+      <Button variant="link" as="a" href="#" disabled {...events}>
+        Default
+      </Button>
+      <Button
+        variant="link"
+        as="a"
+        href="#"
+        disabled
+        color="primary"
+        {...events}
+      >
+        Primary
+      </Button>
+      <Button
+        variant="link"
+        as="a"
+        href="#"
+        disabled
+        color="danger"
+        {...events}
+      >
         Danger
       </Button>
     </Toolbar>
