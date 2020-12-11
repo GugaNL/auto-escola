@@ -13,6 +13,9 @@ import Callout, {
   CalloutButton,
   CalloutMedia,
 } from "../atoms/Callout"
+import BreadCrumb from "../atoms/BreadCrumb"
+//External Hooks
+import { useScrollToTop } from "../../hooks/scroll"
 //Images
 import Porsche from "../../assets/porsche.jpg"
 import Direction from "../../assets/svg/direction.svg"
@@ -35,72 +38,82 @@ const DocItem = styled.li`
   }
 `
 
-const ProductDetail = () => (
-  <>
-    <MainHeader image={Porsche}>
-      <Heading>
-        <h1>Nome do serviço</h1>
-      </Heading>
-    </MainHeader>
-    <Section>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-        dicta doloribus tempore, esse, neque velit rerum quisquam voluptate
-        ratione, voluptatum ad? Possimus molestiae saepe molestias obcaecati
-        vero soluta quidem odit!
-      </p>
-      <p>
-        Nisi dolorum cupiditate quas architecto harum nam illo fuga fugiat, et
-        ullam quod labore aliquid itaque illum rem modi minus, voluptate quos
-        necessitatibus recusandae corrupti? Tempore obcaecati quia architecto
-        quidem.
-      </p>
-      <p>
-        Rem asperiores ea exercitationem, id voluptatum, cum libero minima
-        maxime repudiandae recusandae dicta vel ullam ab nostrum aperiam ipsum
-        qui? Amet dolorum necessitatibus voluptatem a ex? Non obcaecati
-        excepturi fugit!
-      </p>
-      <h5>Documentos necessários:</h5>
-      <DocList>
-        <DocItem>
-          <FaIdCard />
-          RG
-        </DocItem>
-        <DocItem>
-          <FaIdCard />
-          CPF
-        </DocItem>
-        <DocItem>
-          <FaScroll />
-          CNH
-        </DocItem>
-        <DocItem>
-          <FaHome />
-          Comprovante de residência
-        </DocItem>
-      </DocList>
-    </Section>
-    <Section>
-      <Callout>
-        <CalloutBody>
-          <h6>Faça sua matrícula agora mesmo</h6>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            distinctio, ratione suscipit voluptas vero non perferendis! Illo
-            beatae distinctio voluptatibus facilis hic rerum commodi, quod
-            fugiat eum nulla eligendi nesciunt!
-          </p>
-          <CalloutButton>
-            <Button color="primary">Matricular</Button>
-          </CalloutButton>
-        </CalloutBody>
-        <CalloutMedia image={Direction} />
-      </Callout>
-    </Section>
-    <Footer />
-  </>
-)
+const ProductDetail = () => {
+  useScrollToTop()
+  return (
+    <>
+      <MainHeader image={Porsche}>
+        <Heading>
+          <h1>Nome do serviço</h1>
+        </Heading>
+        <BreadCrumb
+          items={[
+            { label: "Início", link: "/" },
+            { label: "Serviços", link: "" },
+            { label: "Nome do Serviço", link: "" },
+          ]}
+        />
+      </MainHeader>
+      <Section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+          dicta doloribus tempore, esse, neque velit rerum quisquam voluptate
+          ratione, voluptatum ad? Possimus molestiae saepe molestias obcaecati
+          vero soluta quidem odit!
+        </p>
+        <p>
+          Nisi dolorum cupiditate quas architecto harum nam illo fuga fugiat, et
+          ullam quod labore aliquid itaque illum rem modi minus, voluptate quos
+          necessitatibus recusandae corrupti? Tempore obcaecati quia architecto
+          quidem.
+        </p>
+        <p>
+          Rem asperiores ea exercitationem, id voluptatum, cum libero minima
+          maxime repudiandae recusandae dicta vel ullam ab nostrum aperiam ipsum
+          qui? Amet dolorum necessitatibus voluptatem a ex? Non obcaecati
+          excepturi fugit!
+        </p>
+        <h5>Documentos necessários:</h5>
+        <DocList>
+          <DocItem>
+            <FaIdCard />
+            RG
+          </DocItem>
+          <DocItem>
+            <FaIdCard />
+            CPF
+          </DocItem>
+          <DocItem>
+            <FaScroll />
+            CNH
+          </DocItem>
+          <DocItem>
+            <FaHome />
+            Comprovante de residência
+          </DocItem>
+        </DocList>
+      </Section>
+      <Section>
+        <Callout>
+          <CalloutBody>
+            <h6>Faça sua matrícula agora mesmo</h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              distinctio, ratione suscipit voluptas vero non perferendis! Illo
+              beatae distinctio voluptatibus facilis hic rerum commodi, quod
+              fugiat eum nulla eligendi nesciunt!
+            </p>
+            <CalloutButton>
+              <Button color="primary">Matricular</Button>
+            </CalloutButton>
+          </CalloutBody>
+          <CalloutMedia image={Direction} />
+        </Callout>
+      </Section>
+      <Footer />
+    </>
+  )
+}
 
 ProductDetail.defaultProps = {}
 

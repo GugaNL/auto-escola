@@ -1,8 +1,7 @@
 import React from "react"
 import { FaCar, FaKey, FaMapMarkerAlt, FaAccessibleIcon } from "react-icons/fa"
 //import PropTypes from "prop-types"
-import Porsche from "../../assets/porsche.jpg"
-import Road from "../../assets/road.mp4"
+import { Link } from "react-router-dom"
 import MainHeader from "../molecules/MainHeader"
 import Heading from "../atoms/Heading"
 import Button from "../atoms/Button"
@@ -15,6 +14,8 @@ import Accordion from "../atoms/Accordion"
 import AccordionGroup from "../atoms/AccordionGroup"
 
 //Images
+import Road from "../../assets/road.mp4"
+import Porsche from "../../assets/porsche.jpg"
 import Driver from "../../assets/driver.jpg"
 import Travel from "../../assets/travel.jpg"
 import Trucks from "../../assets/trucks.jpg"
@@ -121,7 +122,9 @@ const Home = () => (
             necessitatibus.
           </p>
           <div>
-            <Button color="primary">Saiba mais</Button>
+            <Button as={Link} to="/sobre" color="primary">
+              Saiba mais
+            </Button>
           </div>
         </div>
         <div>

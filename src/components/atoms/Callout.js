@@ -48,6 +48,7 @@ CalloutButton.propTypes = {
 const StyledCalloutMedia = styled.img`
   width: 100%;
   max-width: 200px;
+  max-height: 200px;
   display: none;
 
   ${BreakAt(BreakpointSize.sm)} {

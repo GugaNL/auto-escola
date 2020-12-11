@@ -69,12 +69,16 @@ const Button = styled.button`
   border: 2px solid ${getMainColor};
   color: ${getColorText};
 
+  text-decoration: none;
+  display: inline-block;
+
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
 
-  &:hover:enabled {
+  &:hover:not(:disabled) {
+    // a propriedade :hover:enabled não existe no Link, apenas no button
     background-color: ${getDarkColor};
     border-color: ${getDarkColor};
   }
@@ -84,7 +88,7 @@ const ButtonOutlined = styled(Button)`
   background-color: transparent;
   color: ${getMainColor};
 
-  &:hover:enabled {
+  &:hover:not(:disabled) {
     background-color: transparent;
     color: ${getDarkColor};
   }
@@ -96,7 +100,7 @@ const ButtonLinked = styled(Button)`
   color: ${getLinkText};
   padding: 0;
 
-  &:hover:enabled {
+  &:hover:not(:disabled) {
     background-color: transparent;
     border-color: transparent;
     color: ${getDarkColor};
