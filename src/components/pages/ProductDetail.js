@@ -14,8 +14,7 @@ import Callout, {
   CalloutMedia,
 } from "../atoms/Callout"
 import BreadCrumb from "../atoms/BreadCrumb"
-//External Hooks
-import { useScrollToTop } from "../../hooks/scroll"
+
 //Images
 import Porsche from "../../assets/porsche.jpg"
 import Direction from "../../assets/svg/direction.svg"
@@ -39,7 +38,6 @@ const DocItem = styled.li`
 `
 
 const ProductDetail = () => {
-  useScrollToTop()
   return (
     <>
       <MainHeader image={Porsche}>
