@@ -1,5 +1,5 @@
 import React from "react"
-//import PropTypes from "prop-types"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import { FaHome, FaScroll, FaIdCard } from "react-icons/fa"
 //Components
@@ -37,18 +37,18 @@ const DocItem = styled.li`
   }
 `
 
-const ProductDetail = () => {
+const ProductDetail = ({ product }) => {
   return (
     <>
       <MainHeader image={Porsche}>
         <Heading>
-          <h1>Nome do serviço</h1>
+          <h1>{product.title}</h1>
         </Heading>
         <BreadCrumb
           items={[
             { label: "Início", link: "/" },
             { label: "Serviços", link: "" },
-            { label: "Nome do Serviço", link: "" },
+            { label: `${product.title}`, link: "" },
           ]}
         />
       </MainHeader>
@@ -113,8 +113,18 @@ const ProductDetail = () => {
   )
 }
 
-//ProductDetail.defaultProps = {}
+ProductDetail.defaultProps = {
+  product: {},
+}
 
-//ProductDetail.propTypes = {}
+ProductDetail.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    image: PropTypes.string,
+    title: PropTypes.string,
+    slang: PropTypes.string,
+    summary: PropTypes.string,
+  }),
+}
 
 export default ProductDetail
