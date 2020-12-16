@@ -9,8 +9,6 @@ import Section from "../molecules/Section"
 import Grid from "../atoms/Grid"
 import Footer from "../organisms/Footer"
 import { CardMedia, CardMediaDesc } from "../molecules/Card"
-//External Hooks
-import { useScrollToTop } from "../../hooks/scroll"
 //Images
 import Porsche from "../../assets/porsche.jpg"
 import AboutImage from "../../assets/svg/about.svg"
@@ -36,7 +34,6 @@ const Image = styled.img`
 `
 
 const About = () => {
-  useScrollToTop()
   return (
     <>
       <MainHeader image={Porsche}>
