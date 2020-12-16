@@ -13,6 +13,6 @@ test("renders ProductDetail page", () => {
     </Router>
   )
 
-  const titlePage = screen.getByText("Nome do serviço")
+  const titlePage = screen.getByText("Documentos necessários:")
   expect(titlePage).toBeInTheDocument()
 })
