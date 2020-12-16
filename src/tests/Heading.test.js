@@ -1,14 +1,17 @@
 import React from "react"
-import GlobalStyle from "./GlobalStyle"
+
+import Heading from "../components/atoms/Heading"
+
 import ThemeProvider from "../styles/ThemeProvider"
+
 import { render } from "@testing-library/react"
 
 test("match snapshot", () => {
-  render(
+  const { asFragment } = render(
     <ThemeProvider>
-      <GlobalStyle />
+      <Heading>Title</Heading>
     </ThemeProvider>
   )
 
-  expect(document.head).toMatchSnapshot()
+  expect(asFragment()).toMatchSnapshot()
 })

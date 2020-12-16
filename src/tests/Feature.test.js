@@ -1,7 +1,7 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import Feature from "./Feature"
-import ThemeProvider from "../../styles/ThemeProvider"
+import Feature from "../components/atoms/Feature"
+import ThemeProvider from "../styles/ThemeProvider"
 
 test("renders the title", () => {
   const { getByText } = render(

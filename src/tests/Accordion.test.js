@@ -1,7 +1,7 @@
 import React from "react"
 import { render, screen, fireEvent } from "@testing-library/react"
-import ThemeProvider from "../../styles/ThemeProvider"
-import Accordion from "./Accordion"
+import ThemeProvider from "../styles/ThemeProvider"
+import Accordion from "../components/atoms/Accordion"
 
 const childrenText = "My children text"
 const titleText = "My title"

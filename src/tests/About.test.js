@@ -1,18 +1,18 @@
 import React from "react"
 import { render, screen } from "@testing-library/react"
-import ProductDetail from "../pages/ProductDetail"
-import ThemeProvider from "../../styles/ThemeProvider"
+import About from "../components/pages/About"
+import ThemeProvider from "../styles/ThemeProvider"
 import { MemoryRouter as Router } from "react-router-dom"
 
-test("renders ProductDetail page", () => {
+test("renders About page", () => {
   render(
     <Router>
       <ThemeProvider>
-        <ProductDetail />
+        <About />
       </ThemeProvider>
     </Router>
   )
 
-  const titlePage = screen.getByText("Documentos necessários:")
+  const titlePage = screen.getByText("Auto Escola Lucena")
   expect(titlePage).toBeInTheDocument()
 })

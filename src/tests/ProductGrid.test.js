@@ -1,6 +1,6 @@
 import React from "react"
 import { render, fireEvent, screen } from "@testing-library/react"
-import ProductGrid from "./ProductGrid"
+import ProductGrid from "../components/organisms/ProductGrid"
 import { MemoryRouter as Router } from "react-router-dom"
 
 const buildProducts = (size) => {

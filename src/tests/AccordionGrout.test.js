@@ -1,8 +1,8 @@
 import React from "react"
 import { render, screen, fireEvent } from "@testing-library/react"
-import ThemeProvider from "../../styles/ThemeProvider"
-import AccordionGroup from "./AccordionGroup"
-import Accordion from "./Accordion"
+import ThemeProvider from "../styles/ThemeProvider"
+import AccordionGroup from "../components/atoms/AccordionGroup"
+import Accordion from "../components/atoms/Accordion"
 
 const title = "My title"
 
