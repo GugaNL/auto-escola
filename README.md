@@ -4,7 +4,7 @@ Projeto desenvolvido apenas para aprendizagem, ultilizando ReactJS, bem como hoo
 
 Demonstrações:
 
-- [Deploy da aplicação no vercel](https://auto-escola.guganl.vercel.app/)
+- [Deploy da aplicação](https://auto-escola.guganl.vercel.app/)
 - [Storybook contento biblioteca dos componentes](https://www.chromatic.com/library?appId=5fd01e3baf074f00213fb2af)
 
 # Getting Started with Create React App
